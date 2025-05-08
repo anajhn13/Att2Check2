@@ -1,0 +1,33 @@
+{
+  "clientes": [
+    {
+      "id": "dfafs",
+      "nome": "Thiago Xavier",
+      "telefone": "123456789"
+    },
+    {
+      "id": "ddsaf",
+      "nome": "Deborah Aarão",
+      "telefone": "3245678"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Eletrônicos",
+      "descricao": "Dispositivos eletrônicos e gadgets",
+      "ativa": true
+    },
+    {
+      "id": 2,
+      "nome": "Moda",
+      "descricao": "Roupas e acessórios",
+      "ativa": true
+    },
+    {
+      "id": 3,
+      "nome": "Livros",
+      "ativa": false
+    }
+  ]
+}
