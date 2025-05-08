@@ -1,0 +1,26 @@
+.text-success{
+  color:green;
+}
+
+.text-danger{
+  background-color: red;
+}
+
+.quadrado{
+  border:1px solid blue;
+  background-color: black;
+  height: 100px;
+  width: 200px;
+}
+
+.special{
+  border: 1px solid red;
+  padding: 20px;
+  margin: 20px;
+}
+
+.errorClass{
+  color:red;
+  font-weight: bold;
+}
+

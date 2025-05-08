@@ -1,0 +1,48 @@
+<form [formGroup] = "categoriaForm" (ngSubmit)="save()">
+  <p>
+    <label>Nome:</label>
+    <input type="text" formControlName="nome" />
+  </p>
+  <p>
+    <label>descricao:</label>
+    <input type="text" formControlName="descricao" />
+  </p>
+  <p>
+    <label>ativo:</label>
+    <input type="text" formControlName="ativo" />
+  </p>
+  <p>
+    <button type="submit">
+      {{
+        categoriaIdEdicao ? "Atualizar" : "Cadastrar"
+      }}
+    </button>
+  </p>
+</form>
+
+<hr />
+<h2>Lista de clientes</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>nome</th>
+      <th>descricao</th>
+      <th>ativo</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(item of categorias; track $index){
+    <tr>
+      <td>{{ item.nome }}</td>
+      <td>{{ item.descricao }}</td>
+      <td> {{item.ativo}} </td>
+      <td>
+        <!-- <input type="button" (click)="editar(item.id)" value="editar" /> -->
+  <input type="button" (click)="remover(item.id)" value="remover" />
+      </td>
+
+    </tr>
+    }
+  </tbody>
+</table>

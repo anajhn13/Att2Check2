@@ -1,0 +1,77 @@
+<p>Control-flow!</p>
+
+<h2>Angular 16</h2>
+
+<div *ngIf="mostrar">
+  <p>Será mostrado caso a variável mostrar seja verdadeiro</p>
+</div>
+
+<h2 *ngIf="color === 'green'" ngClass="color-green">
+  O palmeiras não...
+</h2>
+
+<h2>Else</h2>
+
+<div *ngIf="color === 'red'; else elseBlock">
+  <p>cor verde </p>
+</div>
+
+<ng-template #elseBlock>
+  <p>Não é verde</p>
+</ng-template>
+
+<h2>Angular 17+ </h2>
+@if(color == "green"){
+  <p ngClass="color-green">Aqui é verde</p>
+} @else{
+  <p>Não é verde</p>
+}
+
+<hr>
+<h2>Laço for - Angular 16</h2>
+
+<ul>
+    <li *ngFor="let cor of cores">
+        {{cor}}
+    </li>
+</ul>
+
+<h2>Laço for  - Angular 17</h2>
+
+<ul>
+@for(cor of cores; track $index){
+    <li>{{cor}} - {{$index}}</li>
+}
+</ul>
+
+<h2>Switch - Angular 16</h2>
+
+<label for="selector">Selecione um valor:</label>
+<select id="selector" (change)="trocarValor($event)">
+  <option value="um">Um</option>
+  <option value="dois">Dois</option>
+  <option value="tres">Três</option>
+</select>
+
+<div [ngSwitch]="itemSelecionado">
+    <p *ngSwitchCase="'um'">você selecionou um.</p>
+    <p *ngSwitchCase="'dois'">você selecionou dois.</p>
+    <p *ngSwitchCase="'tres'">você selecionou três.</p>
+</div>
+
+<h2>Switch Angular 17</h2>
+
+@switch (mes) {
+  @case (1) {
+    <p>Janeiro</p>
+  }
+  @case (2) {
+    <p>Fevereiro</p>
+  }
+  @default {
+    <p>Mês não encontrado!</p>
+  }
+}
+
+
+
